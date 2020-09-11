@@ -1,4 +1,3 @@
 # goVMGraphiteEgressWrapper
-
-go build -mod vendor -o goVMGraphiteEgressWrapper
-./ goVMGraphiteEgressWrapper --config config.yml
+- go build -mod vendor -o goVMGraphiteEgressWrapper```
+- ./ goVMGraphiteEgressWrapper --config config.yml
