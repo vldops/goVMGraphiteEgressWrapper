@@ -1,0 +1,5 @@
+logger:
+  level: debug
+victoriaMetrics: http://victoria.dev:8428
+appPort: 8080
+metricName: graphite
