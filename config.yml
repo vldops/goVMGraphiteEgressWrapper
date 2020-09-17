@@ -1,5 +1,8 @@
 logger:
-  level: debug
-victoriaMetrics: http://victoria.dev:8428
+  level: info
+victoriaMetrics: http://victoria.go:8428
 appPort: 8080
 metricName: graphite
+rgxLevelOne: graphite{target="(.*)"}
+rgxLevelTwo: .*[\[\]\{\}\*].*
+

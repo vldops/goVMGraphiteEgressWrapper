@@ -28,6 +28,8 @@ type Config struct {
 	VictoriaMetrics string `yaml:"victoriaMetrics"`
 	AppPort         string `yaml:"appPort"`
 	MetricName      string `yaml:"metricName"`
+	RgxLevelOne     string `yaml:"rgxLevelOne"`
+	RgxLevelTwo     string `yaml:"rgxLevelTwo"`
 }
 
 var config Config
@@ -65,6 +67,13 @@ func init() {
 
 	if config.MetricName == "" {
 		config.MetricName = "graphite"
+	}
+
+	if config.RgxLevelOne == "" {
+		config.RgxLevelOne = `graphite{target="(.*)"}`
+	}
+	if config.RgxLevelTwo == "" {
+		config.RgxLevelTwo = `.*[\[\]\{\}\*].*`
 	}
 }
 
